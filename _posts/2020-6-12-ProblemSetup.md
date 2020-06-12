@@ -39,9 +39,11 @@ $$
 \\
 \\
 \end{aligned}
+\\
 $$
 Now apply the fact that $$y_{t}$$ depends only on $$x_{t}$$, that $$x_{t}$$ depends only on $$x_{t-1}$$, etc. This is why we need this assumption! Otherwise the above would (probably) be intractable. 
 $$
+\\
 \begin{aligned}
 \pi(y_{0:t}, x_{0:t}) &= g(y_{t} |x_{t} )f(x_{t} | x_{t-1})g(y_{t-1} | x_{t-1} ) f(x_{t-1} | x_{t-2}) \ldots g(y_{1} | x_{1}) f(x_{1} | x_{0}) g(y_{0} | x_{0}) f(x_{0}) \\
 &= f(x_{0})g(y_{0}|x_{0}) \prod_{j=1}^{t} f(x_{j} | x_{j-1})g(y_{j}| x_{j})
