@@ -134,3 +134,4 @@ df.plot()
 
 ![png](output_1_1.png)
 
+{% include lib/mathjax.html %}
