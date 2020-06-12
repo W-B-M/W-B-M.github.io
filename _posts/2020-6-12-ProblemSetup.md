@@ -9,6 +9,7 @@ This post follows the work in the (awesome) paper found at http://www.irisa.fr/a
 # Problem setup
 
 The following looks like a lot, but it is simply PDF factorizations and Bayes' rule over and over. Also, notice that the below likelihood factorization appears in hidden Markov models (HMMs) as well (where $$X_{t}$$ can take on only a finite number of values).  Anyways, suppose we have two processes $$\{X_{t}\}$$, $$\{Y_{t}\}$$, where $$X_{t}$$ denotes the state of a dynamic system at time $$t$$ and $$Y_{t}$$ denotes the measurement observed at time $$t$$. Suppose the system evolves according to the probability density functions (PDFs):
+
 $$
 \begin{aligned}
 X_{0} &\sim f(x_{0}) \\
@@ -73,7 +74,15 @@ $$
 \end{aligned}
 $$
 
-where $$Z_{t} \triangleq \int_{X_{0:t}}\pi(x_{0:t}, y_{0:t}) dx_{0:t}$$, the normalizing constant (constant with respect to $$x_{0:t}$$). Notice that $$Z_{t} = \pi(y_{0:t}) = \pi(y_{t} | y_{0:t-1})\pi(y_{0:t-1})$$. So we can rewrite the final line above as 
+where 
+
+$$Z_{t} \triangleq \int_{X_{0:t}}\pi(x_{0:t}, y_{0:t}) dx_{0:t}$$, 
+
+the normalizing constant (constant with respect to $$x_{0:t}$$). Notice that 
+
+$$Z_{t} = \pi(y_{0:t}) = \pi(y_{t} | y_{0:t-1})\pi(y_{0:t-1})$$. 
+
+So we can rewrite the final line above as 
 
 $$
 \begin{aligned}
