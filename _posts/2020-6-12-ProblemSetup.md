@@ -146,7 +146,6 @@ for i in range(1,100):
 # Plots the dataframe created above
 df.plot()
 ```
-
-![alt text](output_1_1.png "Title")
+![Car Image](output_1_1.png)
 
 {% include lib/mathjax.html %}
