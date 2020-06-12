@@ -2,11 +2,8 @@
 ---
 
 @import "{{ site.theme }}";
-
-
-.page-header {
-  color: $darkerGray;
-  text-align: center;
-  background-color: $header-bg-color;
-
-
+.main-content {
+  h1 {
+   color: #ff0000;
+ }
+}
