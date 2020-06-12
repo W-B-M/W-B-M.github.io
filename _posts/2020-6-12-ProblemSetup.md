@@ -78,9 +78,11 @@ where
 
 $$Z_{t} \triangleq \int_{X_{0:t}}\pi(x_{0:t}, y_{0:t}) dx_{0:t}$$, 
 
-the normalizing constant (constant with respect to $$x_{0:t}$$). Notice that 
+the normalizing constant (constant with respect to $$x_{0:t}$$). 
 
-$$Z_{t} = \pi(y_{0:t}) = \pi(y_{t} | y_{0:t-1})\pi(y_{0:t-1})$$. 
+Notice that 
+
+$$Z_{t} = \pi(y_{0:t}) = \pi(y_{t} | y_{0:t-1})\pi(y_{0:t-1})$$
 
 So we can rewrite the final line above as 
 
