@@ -4,10 +4,9 @@
 @import "{{ site.theme }}";
 
 
-.main-content {
-  h1 {
-   color: #ff0000;
- }
-}
+.page-header {
+  color: "grey";
+  text-align: center;
+  background-color: $header-bg-color;
 
 
