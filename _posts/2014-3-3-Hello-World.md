@@ -97,3 +97,5 @@ y= df['System'].values
 
 #df['State'].plot()
 ```
+
+{% include lib/mathjax.html %}
