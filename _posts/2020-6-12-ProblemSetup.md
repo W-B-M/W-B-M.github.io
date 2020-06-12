@@ -109,7 +109,7 @@ g(y_{t} | x_{t}) &= \mathcal{N}\left(y_{t} | \frac{x^{2}_{t}}{20}, \sigma_{v}\ri
 \end{aligned}
 $$
 
-where $$\sigma_{u},\sigma_{v} \in \mathbb{R}^{+}$$ are assumed known. This system is simulated in Python below. Within the next few posts, we will be able to estimate the state (blue line) having only observed a single measurement (orange line). Note that this is an example of a non-linear time series that cannot be modeled using traditional methods.
+where $$\sigma_{u},\sigma_{v} \in \mathbb{R}^{+}$$ are assumed known. This system is simulated in Python below. Within the next few posts, we will be able to (hopefully) estimate the state (blue line) having only observed the measurement sequence (orange line). Note that this is an example of a non-linear time series that cannot be modeled using traditional methods.
 
 
 
