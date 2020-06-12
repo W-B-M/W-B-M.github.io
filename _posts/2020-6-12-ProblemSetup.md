@@ -147,6 +147,6 @@ for i in range(1,100):
 df.plot()
 ```
 
-<img src="output_1_1.png" class="img-responsive" alt=""> </div>
+![alt text](output_1_1.png "Title")
 
 {% include lib/mathjax.html %}
