@@ -21,6 +21,7 @@ For those familiar, notice that under some further assumptions we arrive at the 
 
 
 Okay, so now suppose we have some measurements up to time $$t$$. Define the following 
+
 $$ y_{0:t} \triangleq (y_{0}, y_{1}, \ldots, y_{t}), x_{0:t} \triangleq (x_{0}, x_{1}, \ldots, x_{t}) $$
 
 The joint PDF is given by
@@ -41,7 +42,9 @@ $$
 \end{aligned}
 \\
 $$
+
 Now apply the fact that $$y_{t}$$ depends only on $$x_{t}$$, that $$x_{t}$$ depends only on $$x_{t-1}$$, etc. This is why we need this assumption! Otherwise the above would (probably) be intractable. 
+
 $$
 \\
 \begin{aligned}
@@ -50,9 +53,11 @@ $$
 \\
 \end{aligned}
 $$
+
 Most people skip to that last line; hopefully, the derivation above explains why.
 
 Typically, the goal is to infer the _true_ state $$X_{t}$$ having only observed $$Y_{t}$$. In this case,
+
 $$
 \begin{aligned}
 \\
@@ -67,7 +72,9 @@ $$
 \\
 \end{aligned}
 $$
+
 where $$Z_{t} \triangleq \int_{X_{0:t}}\pi(x_{0:t}, y_{0:t}) dx_{0:t}$$, the normalizing constant (constant with respect to $$x_{0:t}$$). Notice that $$Z_{t} = \pi(y_{0:t}) = \pi(y_{t} | y_{0:t-1})\pi(y_{0:t-1})$$. So we can rewrite the final line above as 
+
 $$
 \begin{aligned}
 \frac{g(y_{t} | x_{t})\pi(x_{0:t}, y_{0:t})}{Z_{t}} &= \frac{g(y_{t} | x_{t})\pi(x_{0:t}, y_{0:t-1})}{\pi(y_{t} | y_{0:t-1})\pi(y_{0:t-1})} \\
@@ -77,17 +84,20 @@ $$
 $$
 
 The prediction of the future state is given by
+
 $$
 \pi(x_{t+1}, x_{0:t} | y_{0:t}) = \pi(x_{0:t}, y_{0:t})f(x_{t+1} | x_{t})
 $$
 
 I'll end this post with the following example:
+
 $$
 \begin{aligned}
 f(x_{t} | x_{t-1}) &= \mathcal{N}\left(x_{t} |  \frac{x_{t-1}}{2} + 25 \frac{x_{t-1}}{1+x^{2}_{t-1}} + 8 \cos(1.2 t), \sigma_{u}\right) \\
 g(y_{t} | x_{t}) &= \mathcal{N}\left(y_{t} | \frac{x^{2}_{t}}{20}, \sigma_{v}\right)
 \end{aligned}
 $$
+
 where $$\sigma_{u},\sigma_{v} \in \mathbb{R}^{+}$$ are assumed known. This system is simulated in Python below. Within the next few posts, we will be able to estimate the state (blue line) having only observed a single measurement (orange line). Note that this is an example of a non-linear time series that cannot be modeled using traditional methods.
 
 
