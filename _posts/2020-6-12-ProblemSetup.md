@@ -2,7 +2,6 @@
 layout: default
 title: Modeling Non-Linear Time Series With Particle Filtering Part I
 ---
-It is hard to gauge how familiar people reading this post are with state-space modeling. I considered writing a post on the classic Kalman filter until I saw the vast amount of free online resources available on the subject. Particularly, https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python provides, what appears to be, an excellent introduction. Furthermore, their code is probably much better than mine. 
 
 This post follows the work in the (awesome) paper found at http://www.irisa.fr/aspi/legland/ref/cappe07a.pdf. I condense a couple of their sections to get at the general idea and implement a standard bootstrap particle filter in Python. The goal of this post is to review the derivation of the general state space model (i.e. the posterior distribution and prediction distribution). 
 
