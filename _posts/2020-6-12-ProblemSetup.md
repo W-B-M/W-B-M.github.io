@@ -147,14 +147,6 @@ for i in range(1,100):
 df.plot()
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f8312183150>
-
-
-
-
-![png](output_1_1.png)
+<img src="output_1_1.png" class="img-responsive" alt=""> </div>
 
 {% include lib/mathjax.html %}
